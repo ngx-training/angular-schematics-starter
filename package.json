@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "A blank schematics",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "ts-node --project ./build/tsconfig.json ./build",
+    "tsc:prod": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "keywords": [
@@ -19,5 +20,11 @@
     "@types/node": "^8.0.31",
     "jasmine": "^3.3.1",
     "typescript": "~3.5.3"
+  },
+  "devDependencies": {
+    "@types/globby": "^9.1.0",
+    "fs-extra": "^8.1.0",
+    "globby": "^10.0.1",
+    "ts-node": "^8.3.0"
   }
 }
