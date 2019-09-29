@@ -6,8 +6,10 @@
       "factory": "./wdc/index#wdc"
     },
     "component": {
+      "aliases": ["c"],
       "description": "Component own component",
-      "factory": "./component-generator/index#component"
+      "factory": "./component-generator/index#component",
+      "schema": "./component-generator/schema.json"
     }
   }
 }
