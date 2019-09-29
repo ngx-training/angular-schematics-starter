@@ -4,6 +4,10 @@
     "wdc": {
       "description": "A blank schematic.",
       "factory": "./wdc/index#wdc"
+    },
+    "component": {
+      "description": "Component own component",
+      "factory": "./component-generator/index#component"
     }
   }
 }
