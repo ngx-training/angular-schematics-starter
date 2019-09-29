@@ -1,0 +1,9 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: '<%= dasherize(name) %>',
+  template: `
+    <%= dasherize(name) %> works
+  `
+})
+export class <%= classify(name) %> { }
