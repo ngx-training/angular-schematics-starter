@@ -1,28 +1,35 @@
 # Getting Started With Schematics
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+## Prerequisites
 
-### Testing
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
+- Please install
+  - Git
+  - Chrome or Firefox
+  - [Node 10](https://nodejs.org/) or higher **(1)**
+  - [Verdaccio | Private npm registry](https://github.com/verdaccio/verdaccio) globally
+  - [Visual Studio Code](https://code.visualstudio.com/), [WebStorm](https://www.jetbrains.com/webstorm/) or your preferred TypeScript IDE.
 
-Check the documentation with
-```bash
-schematics --help
-```
+- Please clone this repository and install the dependencies **(2)**
 
-### Unit Testing
-
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
+### (1) How to install verdaccio globally
 
 ```bash
-npm run build
-npm publish
+# After having node installed
+# Open a terminal and execute the following command
+npm install --global verdaccio
 ```
 
-That's it!
- 
+### (2) How to install this repository
+
+```bash
+git clone https://github.com/ngx-training/angular-schematics-starter.git schematics
+cd schematics
+npm install
+```
+
+### Build
+
+```bash
+npm run build # Build schematics package
+``` 
