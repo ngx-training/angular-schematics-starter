@@ -8,6 +8,12 @@
     "logger": {
       "description": "Logger: Create log outputs",
       "factory": "./logger/index#logger"
+    },
+    "component": {
+      "aliases": ["c"],
+      "description": "Component own component",
+      "factory": "./component-generator/index#component",
+      "schema": "./component-generator/schema.json"
     }
   }
 }
