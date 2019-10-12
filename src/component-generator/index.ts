@@ -9,6 +9,7 @@ import {
   url
 } from '@angular-devkit/schematics';
 
+
 export interface ComponentOptions {
   name: string;
   spec: boolean;
@@ -16,8 +17,6 @@ export interface ComponentOptions {
 
 export function component(options: ComponentOptions): Rule {
   return (_host: HostTree) => {
-    console.log(options);
-
     const templates = apply(url('./files'), [
       applyTemplates({ ...options, ...strings })
     ]);
