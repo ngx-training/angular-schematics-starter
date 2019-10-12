@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+
+describe('<%= dasherize(name) %>', () => {
+  let component: ComponentFixture<<%= classify(name) %>>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({ declarations: [<%= classify(name) %>] })
+    component = TestBed.createComponent(<%= classify(name) %>)
+  });
+
+  describe('When the component is initialized', () => {
+    it.todo('renders data');
+  });
+})
