@@ -1,5 +1,5 @@
-import { remove } from 'fs-extra';
+import { emptyDir } from 'fs-extra';
 
 export function clean(path: string) {
-  return remove(path);
+  return emptyDir(path);
 }
