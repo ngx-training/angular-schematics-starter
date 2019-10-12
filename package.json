@@ -13,6 +13,7 @@
   "author": "",
   "license": "MIT",
   "schematics": "./src/collection.json",
+  "ng-update": "./src/magriations.json",
   "dependencies": {
     "@angular-devkit/core": "^8.3.0",
     "@angular-devkit/schematics": "^8.3.0",
