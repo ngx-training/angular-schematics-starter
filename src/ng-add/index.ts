@@ -7,14 +7,14 @@ function addPackageJsonDependencies(): Rule {
     const dependencies: NodeDependency[] = [
       {
         type: NodeDependencyType.Default,
-        version: '0.0.1',
+        version: '>=0.0.0',
         name: 'wdc2019'
       }
     ];
 
     dependencies.forEach(dependency => {
       addPackageJsonDependency(tree, dependency);
-      context.logger.info(`✅️ "Added ${dependency.name}" into ${dependency.type}`);
+      context.logger.info(`✅️ Added "${dependency.name}" into ${dependency.type}`);
     });
 
     return tree;
