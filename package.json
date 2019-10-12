@@ -26,6 +26,7 @@
     "@types/globby": "^9.1.0",
     "fs-extra": "^8.1.0",
     "globby": "^10.0.1",
+    "prettier": "^1.18.2",
     "ts-node": "^8.3.0"
   }
 }
