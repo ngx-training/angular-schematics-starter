@@ -14,6 +14,12 @@
       "description": "Component own component",
       "factory": "./component-generator/index#component",
       "schema": "./component-generator/schema.json"
+    },
+    "ng-add": {
+      "aliases": ["install"],
+      "description": "Custom ng-add schematic",
+      "factory": "./ng-add/index",
+      "schema": "./ng-add/schema.json"
     }
   }
 }
