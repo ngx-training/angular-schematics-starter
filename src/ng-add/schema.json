@@ -3,5 +3,11 @@
   "id": "NgAggSchematic",
   "title": "WDC Schematics ng-add schematic",
   "type": "object",
-  "description": "Install WDC schematics into project"
+  "description": "Install WDC schematics into project",
+  "properties": {
+    "areYouSure": {
+      "type": "boolean",
+      "x-prompt": "Are you sure?"
+    }
+  }
 }

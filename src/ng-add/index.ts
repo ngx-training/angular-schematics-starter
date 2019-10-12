@@ -1,6 +1,7 @@
 import { chain, Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
 import { addPackageJsonDependency, NodeDependency, NodeDependencyType } from '@schematics/angular/utility/dependencies';
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
+import { Option } from './option';
 
 function addPackageJsonDependencies(): Rule {
   return (tree: Tree, context: SchematicContext) => {
@@ -30,11 +31,11 @@ function installDependencies(): Rule {
   }
 }
 
-export default function(): Rule {
-  return (tree: Tree, _context: SchematicContext) => {
-    return chain([
+export default function(options: Option): Rule {
+  return (tree: Tree, context: SchematicContext) => {
+    return options.areYouSure ? chain([
       addPackageJsonDependencies(),
       installDependencies()
-    ])(tree, _context);
+    ])(tree, context) : tree;
   }
 }

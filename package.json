@@ -1,6 +1,6 @@
 {
   "name": "wdc2019",
-  "version": "0.0.3",
+  "version": "1.0.7",
   "description": "A blank schematics",
   "scripts": {
     "build": "ts-node --project ./build/tsconfig.json ./build",
