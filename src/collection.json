@@ -5,6 +5,10 @@
       "description": "A blank schematic.",
       "factory": "./wdc/index#wdc"
     },
+    "logger": {
+      "description": "Logger: Create log outputs",
+      "factory": "./logger/index#logger"
+    },
     "component": {
       "aliases": ["c"],
       "description": "Component own component",
