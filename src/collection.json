@@ -31,6 +31,11 @@
       "aliases": ["u"],
       "description": "Update components to have tests",
       "factory": "./ng-update/index#updateToV2"
+    },
+    "prettier": {
+      "description": "Generate a new prettier file",
+      "factory": "./prettier/index#prettier",
+      "schema": "./prettier/schema.json"
     }
   }
 }
