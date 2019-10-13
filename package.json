@@ -1,6 +1,6 @@
 {
   "name": "wdc",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "A blank schematics",
   "scripts": {
     "build": "ts-node --project ./build/tsconfig.json ./build",
@@ -13,7 +13,9 @@
   "author": "",
   "license": "MIT",
   "schematics": "./src/collection.json",
-  "ng-update": "./src/migrations.json",
+  "ng-update": {
+    "migrations": "./src/migrations.json"
+  },
   "dependencies": {
     "@angular-devkit/core": "^8.3.0",
     "@angular-devkit/schematics": "^8.3.0",
