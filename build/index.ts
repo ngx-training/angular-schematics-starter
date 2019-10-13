@@ -8,6 +8,7 @@ clean('./dist')
       ['./LICENSE.md', './dist'],
       ['./package.json', './dist'],
       ['./src/collection.json', './dist'],
+      ['./src/migrations.json', './dist'],
       ['./src/**/*schema.json', './dist'],
       ['./src/**/files/**/*', './dist']
     ])
