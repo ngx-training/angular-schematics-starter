@@ -26,6 +26,11 @@
       "factory": "./ng-add/create-starter-component",
       "schema": "./ng-add/schema.json",
       "private": true
+    },
+    "update": {
+      "aliases": ["u"],
+      "description": "Update components to have tests",
+      "factory": "./ng-update/index#updateToV2"
     }
   }
 }
