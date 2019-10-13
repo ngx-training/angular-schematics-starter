@@ -1,6 +1,6 @@
 import { chain, Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
 import { addPackageJsonDependency, NodeDependency, NodeDependencyType } from '@schematics/angular/utility/dependencies';
-import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
+import { NodePackageInstallTask, RunSchematicTask } from '@angular-devkit/schematics/tasks';
 import { Option } from './option';
 
 function addPackageJsonDependencies(): Rule {
@@ -31,11 +31,20 @@ function installDependencies(): Rule {
   }
 }
 
-export default function(options: Option): Rule {
+function runCreateStarterComponent(options: Option): Rule {
   return (tree: Tree, context: SchematicContext) => {
+    context.addTask(new RunSchematicTask('ng-add-starter-component', options));
+    return tree;
+  }
+
+}
+
+export default function(options: Option): Rule {
+  return (tree: Tree, _context: SchematicContext) => {
     return options.areYouSure ? chain([
       addPackageJsonDependencies(),
-      installDependencies()
-    ])(tree, context) : tree;
+      installDependencies(),
+      runCreateStarterComponent(options)
+    ]) : tree;
   }
 }

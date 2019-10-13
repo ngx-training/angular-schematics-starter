@@ -8,6 +8,10 @@
     "areYouSure": {
       "type": "boolean",
       "x-prompt": "Are you sure?"
+    },
+    "createStarterComponent": {
+      "type": "boolean",
+      "x-prompt": "Should be a starter component created?"
     }
   }
 }

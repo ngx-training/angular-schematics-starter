@@ -20,6 +20,12 @@
       "description": "Custom ng-add schematic",
       "factory": "./ng-add/index",
       "schema": "./ng-add/schema.json"
+    },
+    "ng-add-starter-component": {
+      "description": "Ask user for creating starter component",
+      "factory": "./ng-add/create-starter-component",
+      "schema": "./ng-add/schema.json",
+      "private": true
     }
   }
 }
